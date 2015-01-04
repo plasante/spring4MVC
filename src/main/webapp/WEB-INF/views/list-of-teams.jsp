@@ -26,15 +26,15 @@
 		<td>${team.name}</td>
 		<td>${team.rating}</td>
 		<td>
-		<a href="${pageContext.request.contextPath}/team/edit/${team.id}.html">Edit</a><br/>
-		<a href="${pageContext.request.contextPath}/team/delete/${team.id}.html">Delete</a><br/>
+		<a href="<c:url value='/team/edit/${team.id}' />">Edit</a> | 
+		<a href="<c:url value='/team/delete/${team.id}' />">Delete</a><br/>
 		</td>
 	</tr>
 	</c:forEach>
 </tbody>
 </table>
 
-<p><a href="${pageContext.request.contextPath}/index.html">Home page</a></p>
+<p><a href="<c:url value="/" />/index.html">Home page</a></p>
 
 </body>
 </html>

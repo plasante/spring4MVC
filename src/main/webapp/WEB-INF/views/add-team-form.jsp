@@ -1,3 +1,4 @@
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
 
 <?xml version="1.0" encoding="ISO-8859-1" ?>
@@ -14,7 +15,8 @@
 <body>
 <h1>Add team page</h1>
 <p>Here you can add a new team.</p>
-<form:form method="POST" commandName="team" action="${pageContext.request.contextPath}/team/add/process.html">
+<c:url var="url" value="/team" ></c:url>
+<form:form method="POST" commandName="team" action="${url}/add/process.html">
 <table>
 <tbody>
 	<tr>
@@ -33,6 +35,6 @@
 </table>
 </form:form>
 
-<p><a href="${pageContext.request.contextPath}/index.html">Home page</a></p>
+<p><a href="<c:url value='/'/>">Home page</a></p>
 </body>
 </html>

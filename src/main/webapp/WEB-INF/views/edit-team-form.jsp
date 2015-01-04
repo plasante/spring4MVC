@@ -1,3 +1,4 @@
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
 
 <?xml version="1.0" encoding="ISO-8859-1" ?>
@@ -15,7 +16,8 @@
 <h1>Edit team page</h1>
 <p>Here you can edit the existing team.</p>
 <p>${message}</p>
-<form:form method="POST" commandName="team" action="${pageContext.request.contextPath}/team/edit/${team.id}.html">
+<c:url var="action" value="/team" ></c:url>
+<form:form method="POST" commandName="team" action="${action}/edit/${team.id}.html">
 <table>
 <tbody>
 	<tr>
@@ -34,6 +36,6 @@
 </table>
 </form:form>
 
-<p><a href="${pageContext.request.contextPath}/index.html">Home page</a></p>
+<p><a href="<c:url value='/'/>">Home pageHome page</a></p>
 </body>
 </html>
