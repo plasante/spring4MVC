@@ -76,4 +76,18 @@ public class TeamController {
 		modelAndView.addObject("message", message);
 		return modelAndView;
 	}
+	
+	@RequestMapping(value="/populate")
+	public ModelAndView populateDatabase() {
+		ModelAndView modelAndView = new ModelAndView("redirect:/team/list");
+		String[] teamNames = {"Predators","Penguins","Capitals"};
+		int i = 1;
+		Team team = new Team();
+		for (String teamName : teamNames) {
+			team.setName(teamName);
+			team.setRating(i++);
+			teamService.addTeam(team);
+		}
+		return modelAndView;
+	}
 }

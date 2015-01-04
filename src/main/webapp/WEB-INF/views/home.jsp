@@ -17,7 +17,8 @@ pageEncoding="ISO-8859-1"%>
 <p>
 	${message}<br/>
 	<a href="${url}/add.html">Add new team</a><br/>
-	<a href="${url}/list.html">List teams</a>
+	<a href="${url}/list.html">List teams</a><br/>
+	<a href="<c:url value="/" />/populate.html">Populate the db</a>
 </p>
 </body>
 </html>

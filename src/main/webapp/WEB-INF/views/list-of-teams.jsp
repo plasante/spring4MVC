@@ -34,7 +34,7 @@
 </tbody>
 </table>
 
-<p><a href="<c:url value="/" />/index.html">Home page</a></p>
+<p><a href="<c:url value="/" />index.html">Home page</a></p>
 
 </body>
 </html>

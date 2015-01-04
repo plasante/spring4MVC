@@ -85,4 +85,5 @@ public class SpringConfig {
 		resolver.setViewClass(JstlView.class);
 		return resolver;
 	}
+	
 }
